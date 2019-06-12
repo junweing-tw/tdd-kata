@@ -122,4 +122,24 @@ public class TestNormalToRoman {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void test_WhenInputIs_100_ShouldBeReturn_C() {
+        NormalToRoman normalToRoman = new NormalToRoman();
+
+        String expected = "C";
+        String actual = normalToRoman.convert(100);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void test_WhenInputIs_400_ShouldBeReturn_CD() {
+        NormalToRoman normalToRoman = new NormalToRoman();
+
+        String expected = "CD";
+        String actual = normalToRoman.convert(400);
+
+        assertEquals(expected, actual);
+    }
 }

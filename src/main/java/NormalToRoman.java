@@ -3,6 +3,9 @@ import java.util.Map;
 
 public class NormalToRoman {
     private LinkedHashMap<Integer, String> normalToRomanMap = new LinkedHashMap<Integer, String>() {{
+        put(400, "CD");
+        put(100, "C");
+        put(90, "XC");
         put(50, "L");
         put(40, "XL");
         put(10, "X");
@@ -16,10 +19,13 @@ public class NormalToRoman {
         String answer = "";
 
         do {
-            for (Map.Entry<Integer, String> entry : this.normalToRomanMap.entrySet()) {
-                if (number >= entry.getKey()) {
-                    answer = answer.concat(entry.getValue());
-                    number -= entry.getKey();
+            for (Map.Entry<Integer, String> normalToRoman: this.normalToRomanMap.entrySet()) {
+                final Integer normalNumber = normalToRoman.getKey();
+                final String romanNumeral = normalToRoman.getValue();
+
+                if (number >=  normalNumber) {
+                    answer = answer.concat(romanNumeral);
+                    number -=  normalNumber;
                     break;
                 }
             }
