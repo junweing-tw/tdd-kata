@@ -142,4 +142,55 @@ public class TestNormalToRoman {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void test_WhenInputIs_500_ShouldBeReturn_D() {
+        NormalToRoman normalToRoman = new NormalToRoman();
+
+        String expected = "D";
+        String actual = normalToRoman.convert(500);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void test_WhenInputIs_900_ShouldBeReturn_CM() {
+        NormalToRoman normalToRoman = new NormalToRoman();
+
+        String expected = "CM";
+        String actual = normalToRoman.convert(900);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void test_WhenInputIs_999_ShouldBeReturn_CMXCIX() {
+        NormalToRoman normalToRoman = new NormalToRoman();
+
+        String expected = "CMXCIX";
+        String actual = normalToRoman.convert(999);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void test_WhenInputIs_1000_ShouldBeReturn_M() {
+        NormalToRoman normalToRoman = new NormalToRoman();
+
+        String expected = "M";
+        String actual = normalToRoman.convert(1000);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void test_WhenInputIs_2999_ShouldBeReturn_MMCMXCIX() {
+        NormalToRoman normalToRoman = new NormalToRoman();
+
+        String expected = "MMCMXCIX";
+        String actual = normalToRoman.convert(2999);
+
+        assertEquals(expected, actual);
+    }
 }
+
